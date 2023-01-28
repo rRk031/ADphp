@@ -16,8 +16,7 @@ if (isset($_POST['submit'])) {
       echo "passwords do not match";
       exit;
     }
-    //Hash the password
-    $password = password_hash($password, PASSWORD_DEFAULT);
+ 
     // Create a prepared statement
     $stmt = mysqli_prepare($conn, "INSERT INTO users (username, password, email, firstname, lastname) VALUES (?, ?, ?, ?, ?)");
     // Bind the parameters to the placeholders
