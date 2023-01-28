@@ -6,15 +6,15 @@ if(isset($_POST['title'])){
     $title = $_POST['title'];
 
     if(empty($title)){
-        header("Location: ../index.php?mess=error");
+        header("Location: ../home.php?mess=error");
     }else {
         $stmt = $conn->prepare("INSERT INTO todos(title) VALUE(?)");
         $res = $stmt->execute([$title]);
 
         if($res){
-            header("Location: ../index.php?mess=success"); 
+            header("Location: ../home.php?mess=success"); 
         }else {
-            header("Location: ../index.php");
+            header("Location: ../home.php");
         }
         $conn = null;
         exit();
