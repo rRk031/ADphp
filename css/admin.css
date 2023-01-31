@@ -1,0 +1,22 @@
+body {
+    background: #34495e;
+  }
+  
+  h2{
+    font-size: 35px;
+    text-align: center;
+   
+  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border:2px solid #fff;
+  min-width: 20px;
+}
+
